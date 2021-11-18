@@ -2,12 +2,15 @@
  <?php 
  $tile='Index';
  require_once 'includes/header.php' ;
+ require_once 'includes/auth_check.php';
  require_once 'db/conn.php' ;
 
  $results =$crud->getspecialties();
 
  if(!isset($_GET['id'])){
     include 'includes/error.php';
+    header("location: index.php");
+
  } else{
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);
@@ -73,6 +76,11 @@
             id="submit" class="btn btn-success">Saves Changes</button>
             </div>
 </form>
+
+</br>
+<a href= "records.php" class="btn btn-primary"> Back to List </a>
+       
+<a href= "edit.php?id=<?php echo $results['attendee_id'] ?>" class="btn btn-warning"> Edit</a>
 
 <?php  } ?>
 <br>

@@ -1,8 +1,12 @@
 <?php
-
+ require_once 'includes/auth_check.php';
+ require_once 'includes/header.php' ;
 require_once 'db/conn.php' ;
 if(!$_GET['id']){
-    echo 'error';
+    include 'includes/error.php';
+    
+    header("location: index.php");
+
 
 }else{
     $id =$_GET['id'];
@@ -16,7 +20,8 @@ if($result)
             
     else{
 
-    echo '';
+        include 'includes/error.php';
+
          }
     }
 

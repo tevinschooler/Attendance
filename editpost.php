@@ -15,14 +15,14 @@ if(isset($_POST['submit'])){
        $result =$crud->editAttendee($id,$fname, $lname, $dob, $email, $contact, $specailize);
 
        if($result){
-           header("location:records.php");
-        }
+        header("location: records.php");
+    }
         else{
             include 'includes/error.php';
         }
     }
     else{
-        echo'error';
+        include 'includes/error.php';
     }
  
 
