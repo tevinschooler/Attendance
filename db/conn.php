@@ -1,9 +1,11 @@
 <?php
-        $host='127.0.0.1';
-        $db='attandance_db';
-        $user='root';
-        $pass='';
+   $host='b658z28mw41zkohogpsq-mysql.services.clever-cloud.com';
+        $db='b658z28mw41zkohogpsq';
+        $user='ullkfasrjdh89suz';
+        $pass='wYqea2rXoCSSicFsq5Qi';
         $charset ='utf8mb4';
+
+        $dsn= "mysql:host=$host; dbname=$db; charest=$charset";
 
         $dsn= "mysql:host=$host; dbname=$db; charest=$charset";
 
